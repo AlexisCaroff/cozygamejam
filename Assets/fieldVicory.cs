@@ -20,8 +20,10 @@ public class fieldVicory : MonoBehaviour
         if (other.gameObject.tag == "sheep")
         {
             other.gameObject.GetComponent<sheepBrain>().infield = true;
-            moutonsCapture =+ 1;
-            if (moutonsCapture <= moutonforVictory)
+            
+            moutonsCapture += 1;
+            Debug.Log("moutonsCapture " + moutonsCapture);
+            if (moutonsCapture >= moutonforVictory)
             {
                 Debug.Log("Victory");
             }

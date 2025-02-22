@@ -14,16 +14,22 @@ public class bergerwalk : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void FaceTarget()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
         float speed = characontrol.velocity.magnitude;
-        //animator.SetFloat("Speedy", speed);
+        animator.SetFloat("Speedy", speed);
 
-        Vector3 direction = playertransform.position + characontrol.velocity;
+        Vector3 direction = (playertransform.position + characontrol.velocity.normalized);
+        
         //Debug.Log(characontrol.velocity);
         direction = new Vector3(direction.x, 0.0f , direction.z);
-        //Debug.DrawLine(playertransform.position, playertransform.position + characontrol.velocity);
+        //direction = direction.normalized;
+        Debug.DrawLine(playertransform.position, direction);
         if (speed > 0.5)
         {
             transform.LookAt( direction);
