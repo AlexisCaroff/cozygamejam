@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(dogMovement))]
-public class playercontroller : MonoBehaviour
+public class dogoController : MonoBehaviour
 {
     dogMovement movement;
     Camera cam;
@@ -21,13 +21,14 @@ public class playercontroller : MonoBehaviour
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 5000, movementDogMask))
+           // Debug.Log("start deplacement to ");
+           /* if (Physics.Raycast(ray, out hit, 5000, movementDogMask))
             {
                 //move dog
                 Debug.Log("start deplacement to " + hit.collider.name + " " + hit.point);
                 movement.MoveToPoint(hit.point);
 
-            }
+            }*/
         }
     }
 }

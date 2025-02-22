@@ -1,33 +1,27 @@
 using UnityEngine;
 
-
-[RequireComponent(typeof(dogMovement))]
-public class playercntroller : MonoBehaviour
+public class playerController : MonoBehaviour
 {
-    dogMovement movment;
-    Camera cam;
-    public LayerMask movementDogMask;
+
+    CharacterController controller;
+    public float speed = 5.0f;
+    public Vector3 move;
+    float gravity = 0;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        movment = GetComponent<dogMovement>();
-
-        cam = Camera.main;
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 500, movementDogMask))
-            {
-                //move dog
-                Debug.Log("start deplacement to " + hit.collider.name + " " + hit.point);
-                movment.MoveToPoint(hit.point);
+        if (!controller.isGrounded) {
+            gravity = -0.2f;
+                }
+        else { gravity = 0; }
+        move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
 
-            }
-        }
+        controller.Move(move * Time.deltaTime * speed);
     }
 }
