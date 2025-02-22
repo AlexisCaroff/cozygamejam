@@ -5,6 +5,7 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     dogMovement movement;
+    
     Camera cam;
     public LayerMask movementDogMask;
     void Start()
@@ -24,7 +25,7 @@ public class playercontroller : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 5000, movementDogMask))
             {
                 //move dog
-                Debug.Log("start deplacement to " + hit.collider.name + " " + hit.point);
+                //Debug.Log("start deplacement to " + hit.collider.name + " " + hit.point);
                 movement.MoveToPoint(hit.point);
 
             }
