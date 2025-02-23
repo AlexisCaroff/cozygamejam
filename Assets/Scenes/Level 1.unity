@@ -1970,6 +1970,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4593351287206830314, guid: 72092c916a6c9c3489abb27cb0e46ebd, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -334000983
+      objectReference: {fileID: 0}
     - target: {fileID: 5465666088709483438, guid: 72092c916a6c9c3489abb27cb0e46ebd, type: 3}
       propertyPath: m_Name
       value: sheep
@@ -1992,7 +1996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907517161379576501, guid: 72092c916a6c9c3489abb27cb0e46ebd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6907517161379576501, guid: 72092c916a6c9c3489abb27cb0e46ebd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2269,13 +2273,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1283592224276328234, guid: 70a035fbd8a5edf408631a56b888fa75, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
+      objectReference: {fileID: 0}
     - target: {fileID: 3853198213215016358, guid: 70a035fbd8a5edf408631a56b888fa75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.83
       objectReference: {fileID: 0}
     - target: {fileID: 3853198213215016358, guid: 70a035fbd8a5edf408631a56b888fa75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.38
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3853198213215016358, guid: 70a035fbd8a5edf408631a56b888fa75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2550,7 +2558,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 721857146}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1121376846}
@@ -2569,3 +2576,4 @@ SceneRoots:
   - {fileID: 1798980465}
   - {fileID: 1589862495}
   - {fileID: 983143853}
+  - {fileID: 721857146}

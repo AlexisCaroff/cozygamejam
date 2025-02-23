@@ -1,26 +1,47 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class fieldVicory : MonoBehaviour
 {
+   
+    public float fadeDuration = 1.0f;
     GameObject[] moutons;
     float moutonforVictory ;
     int moutonsCapture = 0;
-    TextMeshProUGUI victory; 
+    public TextMeshProUGUI victory;
+    public TextMeshProUGUI NextLeveltext;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moutons = GameObject.FindGameObjectsWithTag("sheep");
         moutonforVictory = moutons.Length;
-        victory = TextMeshProUGUI.FindFirstObjectByType<TextMeshProUGUI>();
-        Debug.Log(victory);
+        victory = GameObject.Find("VictoryText").GetComponent<TextMeshProUGUI>();
+        NextLeveltext = GameObject.Find("nextLeveltext").GetComponent<TextMeshProUGUI>();
         Debug.Log(moutonforVictory + " moutons a ramener");
+    }
+
+    IEnumerator FadeInText()
+    {
+        Color color = victory.color;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+            victory.color = color;
+            NextLeveltext.color = color;
+            yield return null;
+        }
     }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "sheep")
+       
+        
+       if (other.gameObject.tag == "sheep")
         {
             other.gameObject.GetComponent<sheepBrain>().infield = true;
             
@@ -28,8 +49,9 @@ public class fieldVicory : MonoBehaviour
             Debug.Log("moutonsCapture " + moutonsCapture);
             if (moutonsCapture >= moutonforVictory)
             {
+                StartCoroutine(FadeInText());
                 Debug.Log("Victory");
-                victory.color = new Color(1,1,1,1) ;
+                
             }
         }
     }
