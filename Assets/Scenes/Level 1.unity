@@ -2540,7 +2540,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b98df5401ea082f419058493cc09a64d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 145e8a960fdf65b42bb42d3e504a3300, type: 2}
   m_BuildHeightMesh: 0
 --- !u!154 &1121376844
 TerrainCollider:
@@ -2560,7 +2560,7 @@ TerrainCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 835293f971d4a3b428c4f9b8dfee41b5, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 4b217aa2fbae2f442af38964be2d0b05, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1121376845
 Terrain:
@@ -2571,7 +2571,7 @@ Terrain:
   m_GameObject: {fileID: 1121376842}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 835293f971d4a3b428c4f9b8dfee41b5, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 4b217aa2fbae2f442af38964be2d0b05, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
