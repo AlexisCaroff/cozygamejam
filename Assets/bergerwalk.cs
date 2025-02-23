@@ -27,7 +27,7 @@ public class bergerwalk : MonoBehaviour
         Vector3 direction = (playertransform.position + characontrol.velocity.normalized);
         
         //Debug.Log(characontrol.velocity);
-        direction = new Vector3(direction.x, 0.0f , direction.z);
+        direction = new Vector3(direction.x, playertransform.position.y , direction.z);
         //direction = direction.normalized;
         Debug.DrawLine(playertransform.position, direction);
         if (speed > 0.5)

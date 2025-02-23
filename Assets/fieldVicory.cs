@@ -1,10 +1,12 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using System.Collections;
 
 public class fieldVicory : MonoBehaviour
 {
-   
+    private Button button;
+    private TextMeshProUGUI buttonText;
     public float fadeDuration = 1.0f;
     GameObject[] moutons;
     float moutonforVictory ;
@@ -19,6 +21,8 @@ public class fieldVicory : MonoBehaviour
         victory = GameObject.Find("VictoryText").GetComponent<TextMeshProUGUI>();
         NextLeveltext = GameObject.Find("nextLeveltext").GetComponent<TextMeshProUGUI>();
         Debug.Log(moutonforVictory + " moutons a ramener");
+        GameObject buttonObj = GameObject.Find("NextLevel");
+        button = buttonObj.GetComponent<Button>();
     }
 
     IEnumerator FadeInText()

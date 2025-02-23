@@ -17,7 +17,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         if (!controller.isGrounded) {
-            gravity = -0.2f;
+            gravity = -0.8f;
                 }
         else { gravity = 0; }
         move = new Vector3(Input.GetAxis("Horizontal"), gravity, Input.GetAxis("Vertical"));
