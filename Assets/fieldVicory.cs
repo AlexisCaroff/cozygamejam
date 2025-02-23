@@ -21,7 +21,7 @@ public class fieldVicory : MonoBehaviour
         victory = GameObject.Find("VictoryText").GetComponent<TextMeshProUGUI>();
         NextLeveltext = GameObject.Find("nextLeveltext").GetComponent<TextMeshProUGUI>();
         Debug.Log(moutonforVictory + " moutons a ramener");
-        GameObject buttonObj = GameObject.Find("NextLevel");
+        GameObject buttonObj = GameObject.Find("Next Level");
         button = buttonObj.GetComponent<Button>();
     }
 
@@ -53,6 +53,7 @@ public class fieldVicory : MonoBehaviour
             Debug.Log("moutonsCapture " + moutonsCapture);
             if (moutonsCapture >= moutonforVictory)
             {
+                button.interactable = true;
                 StartCoroutine(FadeInText());
                 Debug.Log("Victory");
                 
