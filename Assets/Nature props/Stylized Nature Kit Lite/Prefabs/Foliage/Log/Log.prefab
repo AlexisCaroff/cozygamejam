@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 8199249045260833029}
   - component: {fileID: 2766505880894280285}
   - component: {fileID: 8514139756161809278}
+  - component: {fileID: 2878767734509826506}
   m_Layer: 0
   m_Name: Log
   m_TagString: Untagged
@@ -418,6 +419,22 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 0
   m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!208 &2878767734509826506
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157409133979067158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.15, y: 0.5, z: 0.2}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6383274348863236275
 GameObject:
   m_ObjectHideFlags: 0
